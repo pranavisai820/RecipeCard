@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<body>
+    <h1 id="print-heading">Brownie Recipe</h1>
+  <div class="wrapper">
+  <div class="container" id="mainCard">
+    <div class="left">
+      <img src="Brownies_0.jpg" alt="Brownie Image" id="mainImage">
+    </div>
+    <div class="right">
+      <h2>Brownie</h2>
+      <div class="stats">
+        <div>35-40<br><span>Minutes</span></div>
+        <div>8<br><span>Ingredients</span></div>
+        <div>8-10<br><span>Servings</span></div>
+      </div>
+      <div class="description">
+        Delicately crisp on top with a rich, fudgy center these brownies offer a deep, smooth chocolate flavor in every satisfying bite —<span>simple to love, hard to forget.</span>
+      </div>
+      <div class="button-container">
+        <button class="button" onclick="showRecipe()">View Recipe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="expand-section" id="expandSection">
+    <div class="expand-buttons">
+      <button class="btn" onclick="showContent('ingredients')">Show Ingredients</button>
+      <button class="btn" onclick="showContent('steps')">Show Steps</button>
+    </div>
+
+    <div id="ingredients" class="content">
+      <div class="ingredient-flex">
+        <div>
+          <h3>Ingredients :-</h3>
+          <ul>
+           <li>Semi-sweet chocolate chips – 1 cup (about 170g)</li>
+  <li>Unsalted butter – ½ cup (1 stick or 113g), melted</li>
+  <li>Unsweetened cocoa powder (100% cocoa) – ½ cup (about 43g)</li>
+  <li>Eggs – 3 large eggs</li>
+  <li>Salt – ½ teaspoon</li>
+  <li>Granulated sugar – 1 cup (200g)</li>
+  <li>All-purpose flour – ¾ cup (95g)</li>
+  <li>Pure vanilla extract – 1½ teaspoons</li>
+   
+          </ul>
+        </div>
+        <img src="Brownie-Recipe-Ingredient.jpg" alt="Ingredients Image">
+      </div>
+    </div>
+
+    <div id="steps" class="content">
+      <h3>Steps :-</h3>
+      <ol>
+        <li>Preheat oven to 350°F and line an 8×8" metal baking pan with parchment paper.</li>
+  <li>Melt butter, then whisk in sugar and cocoa powder until smooth.</li>
+  <li>Add eggs, vanilla extract, and salt; whisk well.</li>
+  <li>Fold in flour until just combined, then stir in chocolate chips.</li>
+  <li>Pour batter into the pan and bake for 35–40 minutes.</li>
+  <li>Let cool completely before slicing and serving.</li>
+      </ol>
+    </div>
+
+    <div class="progress-area">
+      <div class="timer" id="timer">Time: 0s</div>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+      <div class="action-buttons">
+        <button class="btn" onclick="startCooking()">Start Cooking</button>
+        <button class="btn" onclick="nextStep()">Next Step</button>
+        <button class="btn" onclick="pauseCooking()">Pause</button>
+        <button class="btn" onclick="printRecipe()">Print</button>
+      </div>
+    </div>
+  </div>
+</div>
+<canvas id="celebration"></canvas>
+<div id="print-timer"></div>
+</body>
+</html>
